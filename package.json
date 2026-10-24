@@ -1,26 +1,24 @@
 {
   "name": "puffkin-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Puffkin website: landing, support, privacy policy and terms of service.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "node scripts/check-placeholders.mjs && next build",
+    "start": "npx serve@14.2.4 out",
+    "lint:placeholders": "node scripts/check-placeholders.mjs --strict"
   },
   "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "5.2.10",
     "next": "16.4.3",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react": "19.2.9",
+    "react-dom": "19.2.9"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@types/node": "22.20.5",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "typescript": "5.9.3"
   }
 }

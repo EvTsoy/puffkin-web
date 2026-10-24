@@ -1,17 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  // Static HTML export: deploy the `out/` folder to any host (Vercel, Netlify, Cloudflare Pages, S3...).
+  output: 'export',
+  trailingSlash: true,
+  images: { unoptimized: true },
+  poweredByHeader: false,
 };
 
 export default nextConfig;
